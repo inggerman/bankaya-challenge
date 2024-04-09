@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.german.com/springsoap/gen"
+           targetNamespace="http://www.german.com/springsoap/gen" elementFormDefault="qualified">
+
+    <xs:element name="abilitiesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="abilitiesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="abilitiesBase" type="tns:abilityBase" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="abilityBase">
+        <xs:sequence>
+            <xs:element name="ability" type="tns:ability"/>
+            <xs:element name="is_hidden" type="xs:boolean"/>
+            <xs:element name="slot" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ability">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="url" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--    -->
+
+    <xs:element name="baseExperienceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="baseExperienceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="baseExperience" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="heldItemsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="heldItemsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="heldItems" type="tns:heldItem" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="heldItem">
+        <xs:sequence>
+            <xs:element name="item" type="tns:item"/>
+            <xs:element name="versionDetails" type="tns:versionDetail" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="item">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="url" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="versionDetail">
+        <xs:sequence>
+            <xs:element name="rarity" type="xs:integer"/>
+            <xs:element name="version" type="tns:version"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="version">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="url" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!--    -->
+
+    <xs:element name="idRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="idResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--    -->
+    <xs:element name="nameRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--    -->
+
+    <xs:element name="locationAreaEncountersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="locationAreaEncountersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="locationAreaEncounters" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
