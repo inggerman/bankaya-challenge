@@ -33,3 +33,6 @@ Para correr este proyecto, necesitas tener instalados Docker, Docker Compose y M
 - [Maven](https://maven.apache.org/install.html)
 
 Por favor, asegúrate de que estas herramientas estén correctamente instaladas y configuradas antes de intentar correr el proyecto.
+
+
+La url para acceder al WSDL es: http://localhost:9092/bankaya/pokemon.wsdl
